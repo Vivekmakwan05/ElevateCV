@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Sections</title>
+    <style>
+        .custom-section { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+        .delete-btn { background-color: red; color: white; border: none; padding: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h2>Resume Builder</h2>
+    <input type="text" placeholder="Add">
+    <button id="addField">Add Custom Section</button>
+    <div id="inpArea"></div>
+    <h2>Preview</h2>
+    <div id="resumePreview"></div>
+
+    <script>
+        document.getElementById("addField").addEventListener("click", function () {
+            const inpArea = document.getElementById("inpArea");
+            const previewContainer = document.getElementById("resumePreview");
+
+            const fieldDiv = document.createElement("div");
+            fieldDiv.classList.add("custom-section");
+
+            const fieldName = document.createElement("input");
+            fieldName.setAttribute("type", "text");
+            fieldName.setAttribute("placeholder", "Enter Field Name");
+            fieldName.addEventListener("input", updatePreview);
+
+            const dataField = document.createElement("textarea");
+            dataField.setAttribute("placeholder", "Enter Field Details");
+            dataField.addEventListener("input", updatePreview);
+
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Delete";
+            deleteBtn.classList.add("delete-btn");
+            deleteBtn.addEventListener("click", function () {
+                inpArea.removeChild(fieldDiv);
+                updatePreview();
+            });
+
+            fieldDiv.appendChild(fieldName);
+            fieldDiv.appendChild(document.createElement("br"));
+            fieldDiv.appendChild(dataField);
+            fieldDiv.appendChild(document.createElement("br"));
+            fieldDiv.appendChild(deleteBtn);
+
+            inpArea.appendChild(fieldDiv);
+
+            function updatePreview() {
+                previewContainer.innerHTML = "";
+                document.querySelectorAll(".custom-section").forEach(section => {
+                    const fldName = section.querySelector("input").value;
+                    const fldData = section.querySelector("textarea").value;
+
+                    if (fldName || fldData) {
+                        const sectionPreview = document.createElement("div");
+                        sectionPreview.innerHTML = `<h3>${fldName}</h3><p>${fldData}</p>`;
+                        previewContainer.appendChild(sectionPreview);
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
