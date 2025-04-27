@@ -1,0 +1,115 @@
+
+/*template*/
+
+.main-cont{
+    display: flex;
+}
+.cont0{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px 20px 60px;
+    background-color: #d7dee8dd;
+    margin-top: 20px;
+}
+.cont1{
+    padding: 10px 20px 40px 20px;
+    background-color: #eaebef;
+    max-width: 210px;
+    width: 100%;
+    margin-left: 20px;
+}
+.cont2{
+    padding: 10px 40px 40px 20px;
+    max-width: 400px;
+    width: 100%;
+}
+.pr-p{
+    text-transform: uppercase;
+    font-weight: normal;
+    color: rgb(30, 30, 30);
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.pr-p1{
+    text-transform: uppercase;
+    font-weight: normal;
+    color: rgb(30, 30, 30);
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+#fieldPreview h3{
+    text-transform: uppercase;
+    font-weight: normal;
+    color: rgb(30, 30, 30);
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+#fieldPreview p{
+    font-size: 14px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    line-break: anywhere;
+    clear: both;
+    color: rgb(30, 30, 30);
+}
+.line{
+    height: 1px;
+    width: auto;
+    margin: 10px 0px 10px 0px;
+    background-color: rgba(30, 30, 30, 0.844);
+}
+#previewPhone,#previewEmail,
+#previewAddress,#previewSkills,
+#previewEducation{
+    font-size: 12px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    line-break: anywhere;
+    clear: both;
+    color: rgb(30, 30, 30);
+}
+#previewSummary,#previewLinkdin,
+#previewExperience,#previewAchievements,
+#previewProjects{
+    font-size: 12px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    line-break: anywhere;
+    clear: both;
+    color: rgb(30, 30, 30);
+}
+.editor-p{
+    margin-top: 3px;
+    font-size: 12px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    line-break: anywhere;
+    clear: both;
+}
+hr{
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+
+#previewLinkdin{
+    color: blue;
+}
+
+#previewName,.editor-pN{
+    font-size: 22px;
+    font-family: 'Nunito Sans';    
+    font-weight: 600;
+    font-style: normal;
+}
+#previewBio,.editor-pB{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: rgb(30, 30, 30);
+}
+
+.fa-solid{
+    color: blue;
+}
